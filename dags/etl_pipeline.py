@@ -13,6 +13,13 @@ import numpy as np
 from sqlalchemy import create_engine, text
 import pytz
 
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+)
+
+
 default_args = {
     "owner": "airflow",
     "start_date": datetime(2025, 9, 20, tzinfo=pytz.timezone("Asia/Bangkok")),
